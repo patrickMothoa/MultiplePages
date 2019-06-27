@@ -1,0 +1,39 @@
+
+<div id="main">
+<h3 style="background-color: brown">
+    <img width="50" alt=" Logo" src="assets\images.jpg"> Fakebook.
+  
+</h3>
+ 
+<div id="bod">
+<button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+  <mat-icon>more_vert</mat-icon>
+</button>
+<mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="/register">
+        <mat-icon>adding</mat-icon>
+        <span>Create Profile</span>
+      </button>
+      <button mat-menu-item routerLink="/login">
+        <mat-icon>visibility</mat-icon>
+        <span> Fakebook Profile </span>
+      </button>
+  <button mat-menu-item>
+    <mat-icon>dialpad</mat-icon>
+    <span>Redial</span>
+  </button>
+  <button mat-menu-item disabled>
+    <mat-icon>voicemail</mat-icon>
+    <span>Check voice mail</span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon>notifications_off</mat-icon>
+    <span>Disable alerts</span>
+  </button>
+</mat-menu>
+<button style="margin-right:200px" mat-raised-button color="primary">PixViewer</button>
+<button style="margin-right:200px" mat-raised-button color="primary">AddPal</button>
+<button  mat-raised-button color="primary">Snoopers</button>
+</div>
+<router-outlet></router-outlet>
+</div>
